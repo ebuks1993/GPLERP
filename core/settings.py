@@ -130,7 +130,7 @@ else:
 AUTH_USER_MODEL ='general.User'  
 
 CORS_ALLOWED_ORIGINS=['https://platform.appgyver.com','https://platform.preview.appgyver.com',"https://agcommunity.design-time.eu10.apps.build.cloud.sap","https://agcommunity.preview.eu10.apps.build.cloud.sap"] 
-CSRF_TRUSTED_ORIGINS=['https://*.charisma.ngrok.io/','gplerp-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS=['https://*.charisma.ngrok.io/','https://*.gplerp-production.up.railway.app']
 
 
 
