@@ -117,7 +117,7 @@ else:
             'ENGINE': 'django.db.backends.postgresql',
             'NAME':'railway',
             'USER':'postgres',
-            'PASSWORD': os.environ.get('PASSY'),
+            'PASSWORD':'eAaCGAgc4D1AD3Ca5-g1a42g2Edf6Aga',
             'HOST':'monorail.proxy.rlwy.net',
             'PORT':'41040'
         }
