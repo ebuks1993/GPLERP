@@ -12,6 +12,12 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
+
+from dotenv import load_dotenv
+import os 
+
+load_dotenv()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-**7ae^fe3dy=uo6!)5u6rxwq51gp*cxn)=uh4uwzfig%-k_g9r'
+SECRET_KEY=os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -82,12 +88,9 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 ## enviromental variables 
 
-from dotenv import load_dotenv
-import os 
 
-load_dotenv()
 
-SECRET_KEY=os.environ.get('SECRET_KEY')
+
 
 
 
@@ -117,7 +120,7 @@ else:
             'ENGINE': 'django.db.backends.postgresql',
             'NAME':'railway',
             'USER':'postgres',
-            'PASSWORD':'eAaCGAgc4D1AD3Ca5-g1a42g2Edf6Aga',
+            'PASSWORD':os.environ.get('PASSY'),
             'HOST':'monorail.proxy.rlwy.net',
             'PORT':'41040'
         }
