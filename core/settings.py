@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-**7ae^fe3dy=uo6!)5u6rxwq51gp*cxn)=uh4uwzfig%-k_g9r
 DEBUG = False
 
 # ALLOWED_HOSTS = ['charisma.ngrok.io']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['gplerp-production.up.railway.app']
 
 # Application definition
 
