@@ -105,7 +105,7 @@ class InsuranceSerializer(serializers.ModelSerializer):
     # Vin=serializers.SerializerMethodField(method_name='zok')
     class Meta:
         model=insurance
-        fields=['id', 'package', 'Premium', 'month', 'Car', 'vendor',"full_claims","premium_status","full_premium","name"]
+        fields=['id', 'package', 'Premium', 'month', 'Car', 'vendor',"full_claims","premium_status","full_premium","name","staff"]
 
     # def dok(self,ins:insurance):
     #     return f"{ins.Car.Carspec.Brand} {ins.Car.Carspec.model}"
