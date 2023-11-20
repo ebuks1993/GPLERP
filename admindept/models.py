@@ -70,7 +70,8 @@ class insurance(models.Model):
     full_premium = models.IntegerField(default=0)
     full_claims=models.IntegerField(default=0)
     premium_status= models.CharField( max_length=5000 ,default='no')
-    name = models.CharField(max_length=500, null=True)   
+    name = models.CharField(max_length=500, null=True)
+    staff = models.CharField(max_length=1000 , null=True)   
 
 
 class EmployeeCar(models.Model):

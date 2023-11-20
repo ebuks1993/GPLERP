@@ -24,11 +24,12 @@ class Carserializer(serializers.ModelSerializer):
     insure=serializers.CharField(source='insurance.package',read_only=True)
     prem=serializers.CharField(source='insurance.Premium',read_only=True)
     insurecoy=serializers.CharField(source='insurance.name',read_only=True)
+    staff=serializers.CharField(source='insurance.staff',read_only=True)
     carseg=serializers.SerializerMethodField(method_name='Pla',read_only=True)
 
     class Meta:
         model=Car
-        fields=['id','Asset','Color','Vin','Amount','Odometer','Purchase_type','Created_date','PurchaseDate','Cartype','modelyear','Carspec','Supplier','ram','Storage','brand','Operating_System','modelname','carseg','Supplyname','paper','PlateNum','insure','insurecoy',"Sales_date","Availability","buyer","Sales_amount",'prem']
+        fields=['id','Asset','Color','Vin','Amount','Odometer','Purchase_type','Created_date','PurchaseDate','Cartype','modelyear','Carspec','Supplier','ram','Storage','brand','Operating_System','modelname','carseg','Supplyname','paper','PlateNum','insure','insurecoy',"Sales_date","Availability","buyer","Sales_amount",'prem','staff']
 
     def bla(self,carz:Car):
         return carz.Carspec.Brand
