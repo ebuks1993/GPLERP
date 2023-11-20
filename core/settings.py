@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
-
+x=9
 from dotenv import load_dotenv
 import os 
 
