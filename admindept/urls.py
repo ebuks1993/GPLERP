@@ -4,6 +4,8 @@ from rest_framework.routers import DefaultRouter
 # from .views import UploadView
 from . import views
 
+
+
 router=DefaultRouter()
 router.register('carspec', views.carspecViewset ,basename='carspec')
 router.register('car', views.CarViewset ,basename='car')
