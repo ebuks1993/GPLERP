@@ -12,12 +12,16 @@ from rest_framework.viewsets import ReadOnlyModelViewSet
 from drf_excel.mixins import XLSXFileMixin
 from drf_excel.renderers import XLSXRenderer
 
-from .models import Carspec,Car,carphoto,Asset, InsuranceVendors,insurance,EmployeeCar,localpaper
-from .serializers import Carspecserializer,Carserializer,Car22serializer,CarPhotoserializer,Assetserializer,InsuranceVendorSerializer,InsuranceSerializer,EmployeeCarSerializer,LocalPaperserializer,Assetserializer
+from .models import Carspec,Car,carphoto,Asset, InsuranceVendors,insurance,EmployeeCar,localpaper,Caryear
+from .serializers import Carspecserializer,Carserializer,Car22serializer,CarPhotoserializer,Assetserializer,InsuranceVendorSerializer,InsuranceSerializer,EmployeeCarSerializer,LocalPaperserializer,Assetserializer,caryearserializer
 
 class carspecViewset(ModelViewSet):
     queryset=Carspec.objects.all()
     serializer_class= Carspecserializer
+
+class caryearViewset(ModelViewSet):
+    queryset=Caryear.objects.all()
+    serializer_class= caryearserializer
 
 class AssetViewset(ModelViewSet):
     queryset=Asset.objects.all()

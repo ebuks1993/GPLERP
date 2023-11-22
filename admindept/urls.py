@@ -17,6 +17,7 @@ router.register('InsuranceVendor', views.InsuranceVendorsViewset ,basename='Insu
 router.register('Insurance', views.InsuranceViewset ,basename='Insurance')
 router.register('employeecarentry', views.FullEmployeeCarViewset ,basename='employeecarentry')
 router.register('Asset', views.AssetViewset,basename='Asset')
+router.register('caryear', views.caryearViewset,basename='caryear')
 
 
 

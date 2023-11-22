@@ -1,4 +1,4 @@
-from .models import Carspec,Car,carphoto,Asset,InsuranceVendors,insurance,EmployeeCar,localpaper,Asset
+from .models import Carspec,Car,carphoto,Asset,InsuranceVendors,insurance,EmployeeCar,localpaper,Asset,Caryear
 from rest_framework import serializers 
 from django.db import transaction
 
@@ -8,6 +8,10 @@ class Assetserializer(serializers.ModelSerializer):
         model=Asset
         fields='__all__'
 
+class caryearserializer(serializers.ModelSerializer):
+    class Meta:
+        model=Caryear
+        fields='__all__'
 
 class Carspecserializer(serializers.ModelSerializer):
     class Meta:

@@ -13,7 +13,10 @@ class Carspec(models.Model):
 
     def __str__(self):
         return f'{self.Brand} -- {self.model}'
+class Caryear(models.Model):
+    year = models.CharField( max_length=50)
 
+    
 ## this is the asset information for all the assets we have 
 class Car(models.Model):
     Asset = models.ForeignKey(Asset, on_delete=models.CASCADE,null=True,blank=False)
